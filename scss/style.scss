@@ -182,6 +182,37 @@ a {
 //Portfolio
 #portSec {}
 
+#portContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.portCol {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+}
+
+.portItem {
+    margin: 5% 0;
+    height: auto;
+    width: 100%;
+}
+
+.portTech {
+    color: #777777;
+    padding: 3px;
+    width: auto;
+    border: 2px solid #777;
+    border-radius: 50px;
+    font: {
+        size: 1.2em;
+        family: "Poppins", sans-serif;
+    }
+}
+
 //Weather Section
 #weatherSec {}
 

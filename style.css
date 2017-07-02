@@ -10,6 +10,12 @@ body {
   height: 100%;
   width: 100%; }
 
+input:focus, textarea:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none; }
+
 p {
   font-size: 1.8em;
   font-family: "Lora", serif;
@@ -219,6 +225,31 @@ a {
   font-weight: 400;
   color: #1159a6;
   margin: 30px 0; }
+
+#portContainer {
+  display: flex;
+  justify-content: center; }
+
+.portCol {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 80%;
+  height: auto; }
+
+.portItem {
+  margin: 5% 0;
+  height: auto;
+  width: 100%; }
+
+.portTech {
+  color: #777777;
+  padding: 3px;
+  width: auto;
+  border: 2px solid #777;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-family: "Poppins", sans-serif; }
 
 #icon1 {
   width: auto;

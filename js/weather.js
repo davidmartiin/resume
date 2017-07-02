@@ -8,7 +8,7 @@ function bgColor() {
     switch (weather) {
         case "clear-day":
             $body.css("background-color", "#157FA1");
-            colors = "#b8a61d";
+            colors = "#f1d146";
             break;
         case "clear-night":
             $body.css("background-color", "#432A60");
