@@ -221,6 +221,10 @@ input {
     }
 }
 
+textarea {
+    @extend input;
+}
+
 #contactBtn {
     height: 60px;
     margin: 15px 0;

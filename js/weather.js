@@ -32,6 +32,7 @@ function bgColor() {
             break;
         case "partly-cloudy-day":
             $body.css("background-color", "#1C3D60");
+            colors = "#FFE85F";
             break;
         case "partly-cloudy-night":
             $body.css("background-color", "#051220");

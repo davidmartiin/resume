@@ -62,7 +62,7 @@ button {
   font-weight: 400;
   font-family: "Poppins", sans-serif; }
 
-input {
+input, textarea {
   font-family: "Poppins", sans-serif;
   font-weight: 400; }
 
@@ -237,7 +237,7 @@ a {
   width: 60%;
   max-width: 800px; }
 
-input {
+input, textarea {
   height: 70px;
   border: none;
   background-color: #151515;
@@ -246,7 +246,7 @@ input {
   color: white;
   line-height: 20px;
   font-size: 1.5em; }
-  input:focus {
+  input:focus, textarea:focus {
     border-bottom: 1px solid #1159a6;
     transition: ease-out 0.5s; }
 
