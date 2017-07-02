@@ -78,7 +78,7 @@ a {
 #intro {
     @extend .flexCol;
     background: {
-        image: url(/photos/ep_naturalblack.png);
+        image: url(/resume-vcard/img/ep_naturalblack.png);
         repeat: repeat;
     }
     padding: 30px 0 0 0;
@@ -118,7 +118,7 @@ a {
 }
 
 #aboutTop {
-    margin: $center;
+    margin: 0 auto 30px auto;
     text-align: center;
     height: auto;
     justify-content: center;
