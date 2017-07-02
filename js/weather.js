@@ -1,41 +1,55 @@
-var weatherIco, colors;
+var weatherIco;
+var colors = "blue";
 
 function bgColor() {
     var weather = weatherIco;
     var $body = $("#weatherSec");
-    //    console.log(weather);
+    console.log(weather);
     switch (weather) {
-        case "clear":
+        case "clear-day":
             $body.css("background-color", "#157FA1");
+            colors = "#b8a61d";
             break;
         case "clear-night":
             $body.css("background-color", "#432A60");
-            colors = "#777";
+            colors = "#432A60";
+            $("#icon1").css("filter", "hue-rotate(240deg)");
             break;
         case "rain":
-            $body.css("background-color", "#62757A");
+            $body.css("background-color", "#335765");
+            colors = "#335765";
+            $("#icon1").css("filter", "hue-rotate(150deg)");
             break;
         case "snow":
-            $body.css("background-color", "#46467A");
+            $body.css("background-color", "#4cccff");
+            colors = "#46467A";
+            $("#icon1").css("filter", "hue-rotate(30deg)");
             break;
         case "sleet":
-            $body.css("background-color", "#6C777A");
+            $body.css("background-color", "#4b6a95");
+            colors = "#4b6a95";
+            $("#icon1").css("filter", "hue-rotate(90deg)");
             break;
         case "wind":
-            $body.css("background-color", "#5977F2");
+            $body.css("background-color", "#4987ce");
+            colors = "#e0e0e0";
             break;
         case "fog":
-            $body.css("background-color", "#617AA2");
+            $body.css("background-color", "#857b60");
+            colors = "#857b60";
+            $("#icon1").css("filter", "hue-rotate(270deg)");
             break;
         case "cloudy":
-            $body.css("background-color", "#718DA2");
+            $body.css("background-color", "#e5e5e5");
+            colors = "#31319a";
             break;
         case "partly-cloudy-day":
             $body.css("background-color", "#1C3D60");
-            colors = "#FFE85F";
+            colors = "#43e96f";
             break;
         case "partly-cloudy-night":
             $body.css("background-color", "#051220");
+            colors = "#a8a8a8";
             break;
     }
 
