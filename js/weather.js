@@ -47,7 +47,7 @@ function getWeather() {
     var $contents = $("#contents");
     var isCelsius = false;
 
-    $.getJSON("https://crossorigin.me/https://freegeoip.net/json/", function (location) {
+    $.getJSON("http://freegeoip.net/json/", function (location) {
         $contents.html(
             "You live in " + location.city + ", " + location.region_name
         );
