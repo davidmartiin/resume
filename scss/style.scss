@@ -1,0 +1,249 @@
+$accent: #1159a6;
+$center: 0 auto;
+@import 'base';
+@import 'skill-bars';
+@import 'exp-items';
+// Variables
+//Mixins
+.flexRow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.secHead {
+    width: auto;
+    max-width: 700px;
+    margin: $center;
+}
+
+.sections {
+    @extend .flexCol;
+    text-align: center;
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    }
+}
+
+//Link Styles 
+a {
+    transition: ease-out 0.4s;
+    &:hover {
+        color: $accent;
+        transition: ease-out 0.4s;
+    }
+}
+
+//Button Styles
+.clear {
+    background: none;
+    font-size: 2em;
+    color: #fff;
+    padding: 15px;
+    border: 3px solid #777;
+    transition: ease-out 0.5s;
+    &:hover {
+        transition: ease-out 0.5s;
+        border-color: $accent;
+    }
+}
+
+#heroBtn {
+    margin-top: 8%;
+}
+
+#heroBtnIcon {
+    margin-left: 10px;
+}
+
+.abtBtn {
+    @extend .clear;
+    min-width: 200px;
+    width: 20%;
+    color: black;
+    border-color: black;
+    &:hover {
+        transition: ease-out 0.5s;
+        color: $accent;
+    }
+}
+
+//Hero Section Styles
+#intro {
+    @extend .flexCol;
+    background: {
+        image: url(/photos/ep_naturalblack.png);
+        repeat: repeat;
+    }
+    padding: 30px 0 0 0;
+    text-align: center;
+    height: 105vh;
+}
+
+#introContent {
+    margin: 0 auto 0 auto;
+}
+
+#describeMe {
+    color: white;
+    font: {
+        weight: 200;
+        size: 3.5em;
+    }
+}
+
+#socialIcons {
+    @extend .flexRow;
+    width: auto;
+    height: auto;
+    max-width: 400px;
+    color: white;
+    margin: $center;
+}
+
+.icons {
+    margin: 0 15px;
+}
+
+//About Section
+#aboutSec {
+    @extend .flexCol;
+    justify-content: space-between;
+}
+
+#aboutTop {
+    margin: $center;
+    text-align: center;
+    height: auto;
+    justify-content: center;
+    @extend .flexCol;
+    @extend .secHead;
+}
+
+#profile {
+    margin-top: 20px;
+    display: flex;
+    text-align: left;
+}
+
+#profilePic {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+#skillSet {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skills {
+    text-align: left;
+    @extend .flexCol;
+    width: 45%;
+    h5 {
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.backBar {
+    width: 80%;
+    height: 5px;
+    background-color: #a5a5a5;
+    margin: 10px 0 20px 0;
+}
+
+//Experience / Education
+#exp {
+    background-color: #ebebeb;
+}
+
+.expSections {
+    margin: 30px 0;
+    @extend h3;
+    font: {
+        weight: 400;
+    }
+    color: $accent;
+    margin: 30px 0;
+}
+
+//Portfolio
+#portSec {}
+
+//Weather Section
+#weatherSec {}
+
+#icon1 {
+    width: auto;
+    height: auto;
+    margin: $center;
+    color: blue;
+}
+
+//Contact Section
+#contactSec {
+    background-color: #151515;
+    color: white;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.forms {
+    margin: 40px auto 0 auto;
+    width: 60%;
+    max-width: 800px;
+}
+
+input {
+    height: 70px;
+    border: none;
+    background-color: #151515;
+    border-bottom: 1px solid #777;
+    transition: ease-out 0.5s;
+    color: white;
+    line-height: 20px;
+    font-size: 1.5em;
+    &:focus {
+        border-bottom: 1px solid $accent;
+        transition: ease-out 0.5s;
+    }
+}
+
+#contactBtn {
+    height: 60px;
+    margin: 15px 0;
+    background-color: $accent;
+    color: white;
+    border: none;
+}
+
+footer {
+    width: 70%;
+    @extend .flexRow;
+    justify-content: space-between;
+    margin: 70px auto 0 auto;
+    padding-bottom: 30px;
+    font-size: .8em;
+    color: #777;
+}
+
+#footerIcons {
+    @extend .flexRow;
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    font-size: 2em;
+    color: white;
+}

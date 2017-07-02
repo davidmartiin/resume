@@ -1,0 +1,88 @@
+@import '_reset';
+$sansFont: "Poppins";
+$serifFont: "Lora";
+p {
+    font: {
+        size: 1.8em;
+        family: "Lora", serif;
+        weight: 400;
+    }
+    color: #8e8989;
+}
+
+h1 {
+    font: {
+        family: "Poppins", sans-serif;
+        weight: semi-bold;
+        size: 9em;
+    }
+    color: white;
+    margin: 5px;
+}
+
+h2 {
+    font: {
+        size: 4.8em;
+        weight: 400;
+        family: "Lora", serif;
+    }
+    font-size: 4.8em;
+}
+
+h3 {
+    font: {
+        size: 4em;
+        weight: semi-bold;
+        family: "Poppins", sans-serif;
+    }
+    font-size: 4em;
+}
+
+h4 {
+    font: {
+        size: 2.3em;
+        family: "Poppins", sans-serif;
+        weight: semi-bold;
+    }
+    color: $accent;
+    margin: 5px;
+}
+
+h5 {
+    font: {
+        family: "Poppins", sans-serif;
+        size: 2.4em;
+        weight: 400;
+    }
+}
+
+h6 {
+    font: {
+        family: "Poppins", sans-serif;
+        size: 1.8em;
+        weight: semi-bold;
+    }
+}
+
+strong {
+    font: {
+        size: 1.6em;
+        weight: 500;
+        family: "Poppins", sans-serif;
+    }
+}
+
+button {
+    font: {
+        size: 1.8em;
+        weight: 400;
+        family: "Poppins", sans-serif;
+    }
+}
+
+input {
+    font: {
+        family: "Poppins", sans-serif;
+        weight: 400;
+    }
+}
