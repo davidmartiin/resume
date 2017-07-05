@@ -10,7 +10,11 @@ module.exports = function (grunt) {
                     spawn: false
                 },
                 css: {
-                    files: ['']
+                    files: ['scss/*.scss'],
+                    tasks: ['sass'],
+                    options: {
+                        spawn: false,
+                    }
                 }
             }
         },
@@ -35,7 +39,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'img/',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: 'img/build/'
+                    dest: 'img/compressed/'
                 }]
             }
         },
@@ -45,7 +49,7 @@ module.exports = function (grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'style.css': 'scss/style.scss1'
+                    "style.css": 'scss/style.scss'
                 }
             }
         }
@@ -53,5 +57,5 @@ module.exports = function (grunt) {
     });
 
     require('load-grunt-tasks')(grunt);
-    grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['watch']);
 }

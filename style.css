@@ -126,6 +126,7 @@ input, textarea {
     width: auto;
     height: auto; } }
 .flexRow, .expItem, #socialIcons, footer, #footerIcons {
+  options: help;
   display: flex;
   justify-content: space-around; }
 
@@ -177,7 +178,7 @@ a {
     color: #1159a6; }
 
 #intro {
-  background-image: url(img/ep_naturalblack.png);
+  background-image: url(img/compressed/ep_naturalblack.png);
   background-repeat: repeat;
   padding: 30px 0 0 0;
   text-align: center;

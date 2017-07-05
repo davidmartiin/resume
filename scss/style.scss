@@ -6,6 +6,7 @@ $center: 0 auto;
 // Variables
 //Mixins
 .flexRow {
+    options: help;
     display: flex;
     justify-content: space-around;
 }
@@ -78,7 +79,7 @@ a {
 #intro {
     @extend .flexCol;
     background: {
-        image: url(img/ep_naturalblack.png);
+        image: url(img/compressed/ep_naturalblack.png);
         repeat: repeat;
     }
     padding: 30px 0 0 0;
