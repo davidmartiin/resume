@@ -2,6 +2,18 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        watch: {
+            scripts: {
+                files: ['js/*.js'],
+                tasks: ['concat', 'uglify'],
+                options: {
+                    spawn: false
+                },
+                css: {
+                    files: ['']
+                }
+            }
+        },
         concat: {
             dist: {
                 src: [
@@ -14,13 +26,32 @@ module.exports = function (grunt) {
         uglify: {
             build: {
                 src: 'js/production.js',
-                dest: 'js/production.js'
+                dest: 'js/production.min.js'
+            }
+        },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'img/build/'
+                }]
+            }
+        },
+        sass: {
+            dist: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    'style.css': 'scss/style.scss1'
+                }
             }
         }
+
     });
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-concat');
 
-
-    grunt.registerTask('default', ['concat', 'uglify']);
+    require('load-grunt-tasks')(grunt);
+    grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'watch']);
 }
