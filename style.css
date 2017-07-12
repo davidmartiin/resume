@@ -126,7 +126,7 @@ input, textarea {
     width: auto;
     height: auto; } }
 .flexRow, .expItem, #socialIcons, footer, #footerIcons {
-  options: help;
+  margin: 0;
   display: flex;
   justify-content: space-around; }
 
@@ -236,10 +236,17 @@ a {
     margin-bottom: 20px; }
 
 .backBar {
-  width: 80%;
+  width: 100%;
   height: 5px;
   background-color: #a5a5a5;
-  margin: 10px 0 20px 0; }
+  margin: 10px 0 20px 0;
+  box-sizing: border-box; }
+
+#html {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  z-index: 1; }
 
 #exp {
   background-color: #ebebeb; }
