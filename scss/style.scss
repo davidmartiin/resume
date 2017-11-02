@@ -34,10 +34,10 @@ $center: 0 auto;
 
 //Link Styles 
 a {
-    transition: ease-out 0.4s;
+    transition: ease-in-out 0.4s;
     &:hover {
         color: $accent;
-        transition: ease-out 0.4s;
+        transition: ease-in-out 0.4s;
     }
 }
 
