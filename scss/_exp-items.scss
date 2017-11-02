@@ -1,8 +1,13 @@
+//Media Queries
 .expItem {
+    @extend .flexRow;
     justify-content: space-between;
     width: 70%;
     margin: $center;
     padding: 0 0 80px 0;
+}
+div .expItem{
+ margin: auto;
 }
 
 .expTitle {
@@ -34,4 +39,27 @@
     background-color: #888;
     width: 8%;
     margin: 10px 0 15px 0;
+}
+
+@media screen and (max-width: 767px) {
+    .expItem {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 80%;
+        padding: 0;
+        height: auto;
+    }
+    .expTitle {
+        width: auto;
+        text-align: left;
+        height: auto;
+        h4 {
+            margin: 0;
+        }
+    }
+    .expDesc {
+        width: auto;
+        height: auto;
+    }
 }
