@@ -58,12 +58,12 @@ function bgColor() {
 
 function getWeather() {
     var lat, long, toFahrenheit, toCelsius, weatherIcon;
-    var apiKey = "06bdce0aad9e21d625f480b4e5441326";
+    var apiKey = "c7992e7409395ea269c325f20176f8b4";
     var $contents = $("#contents");
     var isCelsius = false;
 
 
-    $.getJSON("https://freegeoip.net/json/", function (location) {
+    $.getJSON("https://cors-anywhere.herokuapp.com/https://freegeoip.net/json/", function (location) {
         $contents.html(
             "You live in " + location.city + ", " + location.region_name
         );
@@ -71,7 +71,7 @@ function getWeather() {
         long = location.longitude;
 
         $.ajax({
-            url: "https://crossorigin.me/https://api.darksky.net/forecast/" +
+            url: "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" +
                 apiKey +
                 "/" +
                 lat +
