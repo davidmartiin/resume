@@ -223,13 +223,15 @@ a {
 }
 
 //Weather Section
-#weatherSec {}
+#weatherSec p{
+    color: white;
+}
 
 #icon1 {
     width: auto;
     height: auto;
     margin: $center;
-    color: blue;
+    color: black;
 }
 
 //Contact Section
