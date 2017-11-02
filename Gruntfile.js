@@ -18,6 +18,13 @@ module.exports = function (grunt) {
                 }
             }
         },
+        autoprefixer: {
+            dist:{
+                files: {
+                    'style.css':'style.css'
+    }
+    }
+    },
         concat: {
             dist: {
                 src: [
