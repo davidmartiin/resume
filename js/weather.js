@@ -63,7 +63,7 @@ function getWeather() {
     var isCelsius = false;
 
 
-    $.getJSON("https://cors-anywhere.herokuapp.com/https://freegeoip.net/json/", function (location) {
+    $.getJSON("https://galvanize-cors-proxy.herokuapp.com/https://freegeoip.net/json/", function (location) {
         $contents.html(
             "You live in " + location.city + ", " + location.region_name
         );
@@ -71,7 +71,7 @@ function getWeather() {
         long = location.longitude;
 
         $.ajax({
-            url: "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" +
+            url: "https://galvanize-cors-proxy.herokuapp.com/https://api.darksky.net/forecast/" +
                 apiKey +
                 "/" +
                 lat +
