@@ -8,7 +8,12 @@
     text-decoration: none;
     list-style: none;
 }
-
+html{
+    width: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+    
+}
 body {
     height: 100%;
     width: 100%;
@@ -21,7 +26,7 @@ button:focus {
     outline: none;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     * {
         font: {
             size: 10px;

@@ -6,8 +6,19 @@ $center: 0 auto;
 // Variables
 $hoverFade: ease-in-out .4s;
 //Mixins
+@mixin flexRows {
+    display: flex;
+    justify-content: space-around
+}
+
 .flexRow {
     display: flex;
+    justify-content: space-around;
+}
+
+@mixin flexCols {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -15,6 +26,11 @@ $hoverFade: ease-in-out .4s;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+@mixin secHeads {
+    width: auto;
+    max-width: 700px;
 }
 
 .secHead {
@@ -26,6 +42,7 @@ $hoverFade: ease-in-out .4s;
 .sections {
     @extend .flexCol;
     text-align: center;
+    width: 100%;
     padding: {
         top: 100px;
         bottom: 100px;
@@ -110,74 +127,134 @@ a {
 
 .icons {
     margin: 0 15px;
-    li{ a{
-        color: white;
-        }}
-    hover{
+    li {
+        a {
+            color: white;
+        }
+    }
+    hover {
         color: $accent;
         transition: $hoverFade;
     }
 }
 
-//About Section
-#aboutSec {
-    @extend .flexCol;
-    justify-content: space-between;
+#wipText {
+    color: white;
+    display: block;
+    font-size: 1.6em;
+    width: 600px;
+    margin: $center;
 }
 
-#aboutTop {
-    margin: 0 auto 30px auto;
-    text-align: center;
-    height: auto;
-    justify-content: center;
-    @extend .flexCol;
-    @extend .secHead;
-}
-
-#profile {
-    margin-top: 20px;
-    display: flex;
-    text-align: left;
-}
-
-#profilePic {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-    border-radius: 50%;
-}
-
-#skillSet {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.skills {
-    text-align: left;
-    @extend .flexCol;
-    width: 45%;
-    h5 {
-        margin-bottom: 10px;
-    }
-    p {
-        margin-bottom: 20px;
+@media all and (max-width: 767px){
+    #describeMe{
+        color: white;
+        font: {
+            weight: 200;
+            size: 2.6em;
+        }
     }
 }
+//About Section//
+@media screen and (max-width: 767px) {
 
-.backBar {
-    width: 100%;
-    height: 5px;
-    background-color: #a5a5a5;
-    margin: 10px 0 20px 0;
-    box-sizing: border-box;
+    #aboutSec {
+        @include flexCols;
+    }
+
+    #aboutTop {
+        margin: 0 auto 30px auto;
+        text-align: center;
+        height: auto;
+        @include flexCols;
+        @include secHeads;
+    }
+
+    #profile {
+        margin-top: 20px;
+        display: flex;
+        text-align: left;
+        flex-wrap: wrap;
+    }
+
+    #profilePic {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: $center;
+    }
+
+    #skillSet {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .skills {
+        @include flexCols;
+        width: 100%;
+        p{
+            margin-bottom: 10px;
+        }
+    }
+
+    .backBar {
+        width: 90%;
+        height: 5px;
+        background-color: #a5a5a5;
+        margin: 10px 0 20px 20px;
+        box-sizing: border-box;
+    }
+    .skillType{
+        text-align: left;
+        margin-left: 20px;
+    }
 }
+@media all and (min-width: 768px){
+    
+    #aboutSec {
+        @include flexCols;
+    }
 
-#html {
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-    z-index: 1;
+    #aboutTop {
+        margin: 0 auto 30px auto;
+        text-align: center;
+        height: auto;
+        @include flexCols;
+        @include secHeads;
+    }
+
+    #profile {
+        margin-top: 20px;
+        display: flex;
+        text-align: left;
+    }
+
+    #profilePic {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    #skillSet {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .skills {
+        @include flexCols;
+        width: 100%;
+    }
+
+    .backBar {
+        width: 100%;
+        height: 5px;
+        background-color: #a5a5a5;
+        margin: 10px 0 20px 0;
+        box-sizing: border-box;
+    }
 }
 
 //Experience / Education
@@ -194,6 +271,85 @@ a {
     color: $accent;
     margin: 30px 0;
 }
+
+@media screen and (min-width: 768px) {
+
+    #aboutSec {
+        @include flexCols;
+        justify-content: space-between;
+    }
+
+    #aboutTop {
+        margin: 0 auto 30px auto;
+        text-align: center;
+        height: auto;
+        justify-content: center;
+        @include flexCols;
+        @include secHeads;
+    }
+
+    #profile {
+        margin-top: 20px;
+        display: flex;
+        text-align: left;
+    }
+
+    #profilePic {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+
+    #skillSet {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .skills {
+        text-align: left;
+        @include flexCols;
+        width: 45%;
+        h5 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    .backBar {
+        width: 100%;
+        height: 5px;
+        background-color: #a5a5a5;
+        margin: 10px 0 20px 0;
+        box-sizing: border-box;
+    }
+
+    #html {
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        z-index: 1;
+    }
+
+}
+
+//Experience / Education
+#exp {
+    background-color: #ebebeb;
+}
+
+.expSections {
+    margin: 30px 0;
+    @extend h3;
+    font: {
+        weight: 400;
+    }
+    color: $accent;
+    margin: 30px 0;
+}
+
 //Portfolio
 #portSec {}
 
@@ -229,7 +385,7 @@ a {
 }
 
 //Weather Section
-#weatherSec p{
+#weatherSec p {
     color: white;
 }
 
@@ -239,6 +395,7 @@ a {
     margin: 20px auto 20px auto;
     color: black;
 }
+
 #tempBtns {
     color: white;
     border: solid white 4px;
@@ -246,26 +403,32 @@ a {
     margin: 10px 5px 0 5px;
     background: none;
 }
-button{
-     #celsius{hover{
-        color: #333;
-        border-color: #333;
-        transistion: $hoverFade;
+
+button {
+    #celsius {
+        hover {
+            color: #333;
+            border-color: #333;
+            transistion: $hoverFade;
+        }
     }
+    #fahrenheit {
+        hover {
+            color: #333;
+            border-color: #333;
+            transistion: $hoverFade;
+        }
     }
-    #fahrenheit{
-         hover{
-        color: #333;
-        border-color: #333;
-        transistion: $hoverFade;
-    }
-    }}
-#celsius{
+}
+
+#celsius {
     @extend #tempBtns;
 }
-#fahrenheit{
+
+#fahrenheit {
     @extend #tempBtns;
 }
+
 //Contact Section
 #contactSec {
     background-color: #151515;
