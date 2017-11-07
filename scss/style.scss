@@ -152,7 +152,7 @@ a {
         color: white;
         font: {
             weight: 200;
-            size: 2.6em;
+            size: 2.2em;
         }
     }
 }
@@ -181,8 +181,8 @@ a {
 
     #profilePic {
         display: flex;
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         margin: $center;
     }
@@ -231,6 +231,8 @@ a {
         margin-top: 20px;
         display: flex;
         text-align: left;
+        p{
+            text-align: center}
     }
 
     #profilePic {
@@ -355,7 +357,7 @@ a {
 
 //Portfolio
 #portSec {}
-
+@media screen and (min-width: 768px){
 #portContainer {
     display: flex;
     justify-content: center;
@@ -386,7 +388,46 @@ a {
         family: "Poppins", sans-serif;
     }
 }
+}
+@media all and (max-width: 767px){
+    #portContainer {
+    display: flex;
+    justify-content: center;
+}
 
+.portCol {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+}
+
+.portItem {
+    margin: 5% 0;
+    height: auto;
+    width: 100%;
+}
+    .portTechBox{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: auto;
+        width: auto;
+    }
+    .portTech {
+    color: #777777;
+    padding: 3px;
+        margin: 3px 3px;
+    width: auto;
+    border: 2px solid #777;
+    border-radius: 50px;
+    font: {
+        size: 1.2em;
+        family: "Poppins", sans-serif;
+    }
+}
+}
 //Weather Section
 #weatherSec p {
     color: white;
@@ -433,7 +474,8 @@ button {
 }
 
 //Contact Section
-#contactSec {
+@media all and (max-width: 767px){
+    #contactSec {
     background-color: #151515;
     color: white;
     padding-top: 80px;
@@ -442,11 +484,24 @@ button {
 
 .forms {
     margin: 40px auto 0 auto;
-    width: 60%;
+    width: 80%;
     max-width: 800px;
 }
-
-input {
+    input{
+        height: 70px;
+    border: none;
+    background-color: #151515;
+    border-bottom: 1px solid #777;
+    transition: ease-out 0.5s;
+    color: white;
+    line-height: 20px;
+    font-size: 1.5em;
+    &:focus {
+        border-bottom: 1px solid $accent;
+        transition: ease-out 0.5s;
+    }
+    }
+@mixin input {
     height: 70px;
     border: none;
     background-color: #151515;
@@ -462,7 +517,7 @@ input {
 }
 
 textarea {
-    @extend input;
+    @include input;
 }
 
 #contactBtn {
@@ -475,7 +530,84 @@ textarea {
 
 footer {
     width: 70%;
-    @extend .flexRow;
+    @include flexRows;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    margin: 70px auto 0 auto;
+    padding-bottom: 30px;
+    font-size: .8em;
+    color: #777;
+    p{margin: $center;}
+}
+
+#footerIcons {
+    @include flexRows;
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    font-size: 2em;
+    margin: 0 auto 10px auto;
+}
+
+}
+@media all and (min-width: 768px){
+    #contactSec {
+    background-color: #151515;
+    color: white;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.forms {
+    margin: 40px auto 0 auto;
+    width: 60%;
+    max-width: 800px;
+}
+
+    input{
+        height: 70px;
+    border: none;
+    background-color: #151515;
+    border-bottom: 1px solid #777;
+    transition: ease-out 0.5s;
+    color: white;
+    line-height: 20px;
+    font-size: 1.5em;
+    &:focus {
+        border-bottom: 1px solid $accent;
+        transition: ease-out 0.5s;
+    }
+    }
+@mixin input {
+    height: 70px;
+    border: none;
+    background-color: #151515;
+    border-bottom: 1px solid #777;
+    transition: ease-out 0.5s;
+    color: white;
+    line-height: 20px;
+    font-size: 1.5em;
+    &:focus {
+        border-bottom: 1px solid $accent;
+        transition: ease-out 0.5s;
+    }
+}
+
+textarea {
+    @include input;
+}
+
+#contactBtn {
+    height: 60px;
+    margin: 15px 0;
+    background-color: $accent;
+    color: white;
+    border: none;
+}
+
+footer {
+    width: 70%;
+    @include flexRows;
     justify-content: space-between;
     margin: 70px auto 0 auto;
     padding-bottom: 30px;
@@ -484,9 +616,11 @@ footer {
 }
 
 #footerIcons {
-    @extend .flexRow;
+    @include flexRows;
     height: auto;
     width: auto;
     max-width: 300px;
     font-size: 2em;
+}
+
 }
