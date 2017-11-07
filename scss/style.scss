@@ -142,12 +142,13 @@ a {
     color: white;
     display: block;
     font-size: 1.6em;
-    width: 600px;
+    max-width: 600px;
+    width: 300px;
     margin: $center;
 }
 
-@media all and (max-width: 767px){
-    #describeMe{
+@media all and (max-width: 767px) {
+    #describeMe {
         color: white;
         font: {
             weight: 200;
@@ -155,6 +156,7 @@ a {
         }
     }
 }
+
 //About Section//
 @media screen and (max-width: 767px) {
 
@@ -193,7 +195,7 @@ a {
     .skills {
         @include flexCols;
         width: 100%;
-        p{
+        p {
             margin-bottom: 10px;
         }
     }
@@ -205,13 +207,14 @@ a {
         margin: 10px 0 20px 20px;
         box-sizing: border-box;
     }
-    .skillType{
+    .skillType {
         text-align: left;
         margin-left: 20px;
     }
 }
-@media all and (min-width: 768px){
-    
+
+@media all and (min-width: 768px) {
+
     #aboutSec {
         @include flexCols;
     }
